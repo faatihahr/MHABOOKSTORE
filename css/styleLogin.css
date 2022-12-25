@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #A38458;
+    
+   
+}
+
+h1{
+    color: #2A313B;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.row{
+    margin-top: 12%;
+    background-color: #D9DAD4;
+    border-radius: 10px;
+    box-shadow: 12px 12px 32px #363949;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.form-row{
+    margin-top:0px;
+    margin-bottom: 10px;
+}
+.btn1{
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #2A313B;
+    color: #D9DAD4;
+    font-weight: bold;
+}
+
+.btn1:hover{
+    outline: #363949;
+    border: 1px solid black;
+    color: #2A313B;
+    background-color: white;
+}
+a{
+   color: #2A313B;
+}
+a:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+.slogan{
+    margin-top: 200px;
+    color: rgb(2, 137, 248);
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ 

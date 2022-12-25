@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+   font-family: 'Rubik', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition:all .2s linear;
+}
+
+*::selection{
+   background-color: var(--color-warning);
+   color:var(--white);
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body{
+   background-color: #D9DAD4;
+}
+
+section{
+   padding:30PX 20PX;
+}
+
+.title{
+   text-align: center;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   color: #2A313B;
+   font-size: 40px;
+}
+
+.empty{
+   padding:1.5rem;
+   text-align: center;
+   border:var(--border);
+   background-color: var(--white);
+   color:var(--red);
+   font-size: 2rem;
+}
+   /*====================================== MESSAGE ===================================*/
+.message{
+   position: sticky;
+   top:0;
+   margin:0 auto;
+   max-width: 1200px;
+   background-color: var(--light-bg);
+   padding:2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 10000;
+   gap:1.5rem;
+}
+
+.message span{
+   font-size: 2rem;
+   color:var(--black);
+}
+
+.message i{
+   cursor: pointer;
+   color:var(--red);
+   font-size: 2.5rem;
+}
+
+.message i:hover{
+   transform: rotate(90deg);
+}
+/*================================ BUTTONS ===================================*/
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+   display: inline-block;
+   margin-top: 5px;
+   padding:10px 30px;
+   cursor: pointer;
+   font-size: 18px;
+   border-radius: 5px;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+   background-color: rgb(124, 50, 50);
+}
+
+.white-btn,
+.btn{
+   background-color: #A38458;
+   color: #D9DAD4;
+}
+
+.option-btn{
+   background-color: var(--orange);
+}
+
+.delete-btn{
+   background-color: #D9DAD4;
+   color: #2A313B;
+}
+
+.white-btn:hover{
+   background-color: var(--white);
+   color:var(--black);
+}
+
+.discount {
+   text-align: center;
+   color: #D9DAD4;
+   font-size: 17px;
+}
+
+@keyframes fadeIn {
+   0%{
+      transform: translateY(1rem);
+      opacity: .2s;
+   }
+}
+/* ============================== HEADER =============================*/
+.header{
+   position: sticky;
+   z-index: 1000;
+   background-color: #2A313B;
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   padding:15px;
+   justify-content: space-between;
+   position: relative;
+   max-width: 1200px;
+   margin:0 auto;
+}
+ 
+.header .flex .logo{
+   font-size: 30px;
+   color:#D9DAD4;
+}
+
+.header .flex .navbar a{
+   margin:0 80px;
+   font-size: 20px;
+   color:#D9DAD4;
+}
+.header .flex .navbar a:hover{
+   color:#A38458;
+}
+
+.header .flex .icons div{
+   margin-left: 15px;
+   font-size: 25px;
+   cursor: pointer;
+   color: #D9DAD4;
+}
+
+.header .flex .icons div:hover{
+   color:#A38458;
+}
+.header .flex .account-box{
+   position: absolute;
+   top:120%; right:20px;
+   width: 300px;
+   border-radius: 5px;
+   padding:20px;
+   text-align: center;
+   border-radius: 5px;
+   background-color: #2A313B;
+   display: none;
+   animation:fadeIn .2s linear;
+}
+
+.header .flex .account-box.active{
+   display: inline-block;
+   z-index: 9999999;
+}
+
+.header .flex .account-box p{
+   font-size: 20px;
+   color:#D9DAD4;
+   margin-bottom: 15px;
+}
+
+.header .flex .account-box .delete-btn{
+   margin-top: 0;
+}
+
+.header .flex .account-box div{
+   margin-top: 1.5rem;
+   font-size: 2rem;
+   color:#A38458;
+}
+
+.header .flex .account-box div a .delete-btn{
+   color:#2A313B;
+}
+
+.header .flex .account-box div a:hover{
+   text-decoration: underline;
+}
+
+#menu-btn{
+   display: none;
+}
+
+/*===================== ADD PRODUCT ===================== */
+.add-products {
+   background-color: #D9DAD4;
+}
+
+.add-products form{
+   background-color: #2A313B;
+   border-radius: 5px;
+   padding: 20px;
+   text-align: center;
+   max-width: 500px;
+   margin:0 auto;
+}
+
+.add-products form h3{
+   font-size: 25px;
+   text-transform: uppercase;
+   color:#D9DAD4;
+   margin-bottom: 15px;
+}
+
+.add-products form .box{
+   width: 100%;
+   background-color: white;
+   border-radius: 5px;
+   margin:10px 0;
+   padding:12px 14px;
+   color: #2A313B;
+   font-size: 17px;
+   
+}
+/*================== SHOW THE PRODUCT ==================*/
+.show-products .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.show-products{
+   padding-top: 0;
+}
+
+.show-products .box-container .box{
+   text-align: center;
+   padding:2px;
+   border-radius: 5px;
+   background-color: #A38458;
+}
+.show-products .box-container .box img{
+   height: 300px;
+   padding: 10px;
+}
+.show-products .box-container .box .name{
+   padding:10px 0;
+   font-size: 18px;
+   color:#D9DAD4;
+}
+.show-products .box-container .box .price{
+   padding:10px 0;
+   font-size: 16px;
+   color:#D9DAD4;
+   font-weight: bold;
+}
+
+/*========================================== USERS ===========================================*/
+.users .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.users .box-container .box{
+   background-color: var(--white);
+   padding:2rem;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   text-align: center;
+}
+
+.users .box-container .box p{
+   padding-bottom: 1.5rem;
+   font-size: 2rem;
+   color:var(--light-color);
+   
+}
+
+.users .box-container .box p span{
+   color:var(--purple);
+}
+
+.users .box-container .box .delete-btn{
+   margin-top: 0;
+}
+
+/* =================== MEDIA QUERIES =================== */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      position: absolute;
+      top:99%; left:0; right:0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .flex .navbar a{
+      margin:2rem;
+      display: block;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .title{
+      font-size: 3rem;
+   }
+
+}
